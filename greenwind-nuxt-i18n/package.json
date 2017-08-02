@@ -5,7 +5,8 @@
   "author": "Olle Holmberg <olle@unremarkablegarden.com>",
   "private": true,
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vue-i18n": "^7.1.0"
   },
   "scripts": {
     "dev": "nuxt",
