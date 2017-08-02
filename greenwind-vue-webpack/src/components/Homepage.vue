@@ -1,7 +1,13 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg.en }}</h1>
-  </div>
+	<div class="homepage-wrapper">
+	  <div class="hello">
+	    <h1>{{ msg.en }}</h1>
+	  </div>
+		<div class="my-awesome-buttons">
+			<el-button>Default Button</el-button>
+			<el-button type="primary">Primary Button</el-button>
+		</div>
+	</div>
 </template>
 
 <script>
