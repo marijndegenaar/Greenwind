@@ -20,9 +20,9 @@ export default {
 
   footer
     background: blue
-    height: $page-footer-height
     overflow-y: hidden
     padding: 1rem 0 0 0
+    height: calc(#{$page-footer-height} - 1rem)
     margin: 0
     text-align: center
     color: $white
