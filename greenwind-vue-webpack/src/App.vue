@@ -1,17 +1,17 @@
 <template lang="pug">
   #app
-    AppMenu
+    nav-bar
     #app-body
-      transition(name="bounce", mode="out-in" appear="appear")
+      transition(name="bounce", mode="out-in" appear)
         router-view
 </template>
 
 <script>
-import AppMenu from '@/components/AppMenu'
+import NavBar from '@/components/NavBar'
 
 export default {
   name: 'app',
-  components: { AppMenu }
+  components: { NavBar }
 }
 </script>
 

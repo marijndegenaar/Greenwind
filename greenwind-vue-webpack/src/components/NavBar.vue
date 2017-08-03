@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'menu'
+  name: 'nav-bar'
 }
 </script>
 
@@ -22,11 +22,12 @@ export default {
     color: black
     text-decoration: none
     padding: 10px 20px
-    border-radius: 2px
-    margin: 0 5px
-    transition: all 400ms
+    border-radius: 3px
+    margin: 0 10px
+    transition: all 300ms
   .router-link-exact-active
-    transition: all 400ms
+    transition: all 300ms
     background: blue
     color: white
+    transform: scale(1.1)
 </style>
