@@ -1,16 +1,14 @@
 <template lang="pug">
   .wrapper
-    h1 suck it
-    el-button(type="success") Hello
-    p {{ msg }}
+    h1 {{ msg }}
 </template>
 
 <script>
 export default {
-  name: 'homepage',
+  name: 'about',
   data () {
     return {
-      msg: 'homepage text...'
+      msg: '0800-FUCK-OFF'
     }
   }
 }
@@ -18,5 +16,5 @@ export default {
 
 <style lang="sass" scoped>
   h1
-    color: pink
+    color: orange
 </style>

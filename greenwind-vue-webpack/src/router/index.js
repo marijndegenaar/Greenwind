@@ -9,6 +9,7 @@ import Router from 'vue-router'
 /* Regular loading */
 import Homepage from '@/components/Homepage'
 import About from '@/components/About'
+import Contact from '@/components/Contact'
 import NotFound from '@/components/404'
 
 Vue.use(Router)
@@ -18,6 +19,7 @@ export default new Router({
   routes: [
     { path: '*', component: NotFound },
     { path: '/', component: Homepage },
-    { path: '/about', component: About }
+    { path: '/about', component: About },
+    { path: '/contact', component: Contact }
   ]
 })

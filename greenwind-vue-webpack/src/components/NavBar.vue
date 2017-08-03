@@ -2,6 +2,7 @@
   #menu
     router-link.menu-item(to="/") Home
     router-link.menu-item(to="/about") About
+    router-link.menu-item(to="/contact") Contact
 </template>
 
 <script>
