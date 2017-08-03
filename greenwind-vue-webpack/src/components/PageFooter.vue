@@ -1,20 +1,21 @@
 <template lang="pug">
-  .wrapper
-    h1 {{ msg }}
+  footer
+    p i am thee footer
+    p {{ msg }}
 </template>
 
 <script>
 export default {
-  name: 'contact',
+  name: 'page-footer',
   data () {
     return {
-      msg: '0800-FUCK-OFF'
+      msg: 'i am some more footer txt'
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
-  h1
-    color: orange
+  footer
+    background: blue
 </style>

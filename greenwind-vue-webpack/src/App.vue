@@ -4,14 +4,18 @@
     #app-body
       transition(name="bounce", mode="out-in" appear)
         router-view
+    transition(name="slide-fade", mode="out-in" appear)
+      page-footer
+
 </template>
 
 <script>
 import NavBar from '@/components/NavBar'
+import PageFooter from '@/components/PageFooter'
 
 export default {
   name: 'app',
-  components: { NavBar }
+  components: { NavBar, PageFooter }
 }
 </script>
 
