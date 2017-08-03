@@ -3,6 +3,8 @@
     router-link.menu-item(to="/") Home
     router-link.menu-item(to="/about") About
     router-link.menu-item(to="/contact") Contact
+    router-link.menu-item(to="/prismic") Prismic
+    //- router-link.menu-item(to="/prismicaxios") PrismicAxios
 </template>
 
 <script>
