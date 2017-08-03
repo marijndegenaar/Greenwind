@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper">
+	<div class="wrapper">
     <h1>{{ msg }}</h1>
-  </div>
+	</div>
 </template>
 
 <script>
@@ -9,13 +9,15 @@ export default {
   name: 'homepage',
   data () {
     return {
-      msg: 'homepage text...'
+      msg: 'Page not found'
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
-  h1
-    color: pink
+h1, h2
+  font-weight: normal
+a
+  color: #42b983
 </style>

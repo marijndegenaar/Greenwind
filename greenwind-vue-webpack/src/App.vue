@@ -1,26 +1,20 @@
-<template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+<template lang="pug">
+  #app
+    AppMenu
+    #app-body
+      transition(name="bounce", mode="out-in" appear="appear")
+        router-view
 </template>
 
 <script>
+import AppMenu from '@/components/AppMenu'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: { AppMenu }
 }
 </script>
 
 <style lang="sass">
-	body
-		font-family: 'Avenir', Helvetica, Arial, sans-serif
-		text-align: center
+   @import './assets/main.sass'
 </style>
-
-<!-- #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} -->
