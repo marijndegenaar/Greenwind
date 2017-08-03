@@ -1,5 +1,5 @@
 <template lang="pug">
-  #menu
+  #menu.pinned
     router-link.menu-item(to="/") Home
     router-link.menu-item(to="/about") About
     router-link.menu-item(to="/contact") Contact
@@ -12,12 +12,21 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  @import '../assets/config.sass'
+
   #menu
     width: 100%
-    height: 100px
+    height: $nav-bar-height
     display: flex
     align-items: center
     justify-content: center
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.15)
+    background: $white
+    z-index: $nav-bar-z-index
+    &.pinned
+      position: fixed
+      top: 0
+      left: 0
   .menu-item
     background: #dedede
     color: black

@@ -6,7 +6,6 @@
         router-view
     transition(name="slide-fade", mode="out-in" appear)
       page-footer
-
 </template>
 
 <script>

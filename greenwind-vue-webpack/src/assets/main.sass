@@ -1,18 +1,32 @@
+@import '../assets/config.sass'
+
 *
   user-select: none
   cursor: default
+  // box-sizing: content-box
 a, button
   cursor: pointer
 input, textarea
   cursor: text
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+  padding: 1em 0
+
 body
   font-family: 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   margin: 0
   padding: 0
+  background: $white
+  color: $black
+  font-size: $base-font-size
+
 #app-body
   text-align: center
+  min-height: calc(100vh - #{$nav-and-footer-height})
+  padding-top: $nav-bar-height
+
 .bounce-enter-active
   animation: bounce-in .5s
 .bounce-leave-active
