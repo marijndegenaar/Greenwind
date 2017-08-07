@@ -4,12 +4,17 @@
       b-panel(v-for='post of posts', :key='post.id')
         strong(slot='header') {{ P.RichText.asText(post.data.title) }}
         .content
-          .category Category: {{ post.data.category }}
-          .date Date: {{ post.last_publication_date | moment }}
+          .meta
+            .category Category: {{ post.data.category }}
+            .date Date: {{ post.last_publication_date | moment }}
           .richtext(v-html='P.RichText.asHtml(post.data.content)')
 </template>
 
 <style lang="sass" scoped>
+  .meta
+    border-bottom: 1px #eee solid
+    padding-bottom: 0.5em
+    margin-bottom: 0.5em
 </style>
 
 <script>

@@ -26,7 +26,8 @@ export default {
   filters: {
     moment: (date) => {
       // format date string here... look up moment.js
-      return moment(date).format('l').split('/').join('.')
+      // return moment(date).format('l').split('/').join('.')
+      return moment(date).format('ll')
     }
   },
   created () {
