@@ -6,6 +6,7 @@
         .meta
           .category Category: {{ post.data.category }}
           .date Date: {{ post.last_publication_date | moment }}
+        .content(v-html='P.RichText.asHtml(post.data.content)')
 </template>
 
 <style lang="sass" scoped>

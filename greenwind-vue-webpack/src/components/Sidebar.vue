@@ -1,5 +1,5 @@
 <template lang="pug">
-  .sidebar
+  aside.sidebar
     b-tabs(v-model='activeYearFilter', position='is-center', type='is-toggle' expanded).year
       b-tab-item(label='2017')
       b-tab-item(label='2016')
@@ -63,6 +63,8 @@ export default {
 <style lang="sass" scoped>
   @import '../assets/config.sass'
 
+  .menu-list li
+    margin: 1em
   .energy
     background: $energy
   .offshore
