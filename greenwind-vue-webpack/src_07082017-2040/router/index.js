@@ -7,7 +7,7 @@ import Router from 'vue-router'
 // const About = () => import('@/components/About')
 
 /* Regular loading */
-// import NotFound from '@/components/404'
+import NotFound from '@/components/404'
 // import Homepage from '@/components/Homepage'
 // import About from '@/components/About'
 // import Contact from '@/components/Contact'
@@ -19,7 +19,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    // { path: '*', component: NotFound },
+    { path: '*', component: NotFound },
     { path: '/', component: Prismic }
     // { path: '/about', component: About },
     // { path: '/contact', component: Contact },
