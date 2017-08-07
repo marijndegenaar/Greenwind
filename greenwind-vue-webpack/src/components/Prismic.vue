@@ -1,10 +1,10 @@
 <template>
   <div class='wrapper'>
-    <el-row :gutter="40">
+    <el-row>
 
       <!-- <sidebar></sidebar> -->
       <div class="sidebar">
-        <el-col :span="2">
+        <el-col :span="1">
           <el-menu default-active="2" @open="handleOpen" @close="handleClose" class="el-menu-vertical-demo">
             <el-menu-item index="1"><i class="el-icon-close"></i></el-menu-item>
             <el-menu-item index="2"><i class="el-icon-menu"></i></el-menu-item>
@@ -34,7 +34,7 @@
         </el-col>
       </div>
 
-      <el-col :span="12">
+      <el-col :span="11" :offset="1">
 
         <!-- <div class="loading" v-show='loaderVisibility'>
           <Spinner size='large' line-fg-color='#00F'></Spinner>
