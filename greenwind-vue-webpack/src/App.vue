@@ -23,6 +23,7 @@ export default {
 </script>
 
 <style lang="sass">
+  @import './assets/bulmaConfig.sass'
   @import './assets/config.sass'
   @import './assets/App.sass'
 </style>
