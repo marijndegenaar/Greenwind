@@ -1,6 +1,6 @@
 <template lang="pug">
   .sidebar
-    b-tabs(v-model='activeTab', position='is-center', type='is-toggle').year
+    b-tabs(v-model='activeTab', position='is-center', type='is-toggle' expanded).year
       b-tab-item(label='2017')
       b-tab-item(label='2016')
       b-tab-item(label='2015')
