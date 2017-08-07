@@ -1,0 +1,34 @@
+{
+  "Main" : {
+    "category" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Greenwind Operations", "Greenwind Offshore" ],
+        "label" : "Category",
+        "placeholder" : "Greenwind Energy"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2, heading3, heading4, heading5, heading6",
+        "label" : "title",
+        "placeholder" : "News post title"
+      }
+    },
+    "content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, heading2, heading3, strong, em, hyperlink, image, list-item, o-list-item",
+        "label" : "Content",
+        "placeholder" : "Rich text / images"
+      }
+    },
+    "media_embed" : {
+      "type" : "Embed",
+      "config" : {
+        "label" : "Media embed"
+      }
+    }
+  }
+}
