@@ -1,6 +1,6 @@
 <template lang="pug">
 	nav#filter
-		b-tabs(v-model='activeTab', position='is-right')
+		b-tabs(v-model='activeTab', position='is-right', type="is-boxed")
 			b-tab-item(label='All')
 			b-tab-item(label='Energy', icon="battery_charging_full")
 			b-tab-item(label='Operations', icon="contact_phone")
