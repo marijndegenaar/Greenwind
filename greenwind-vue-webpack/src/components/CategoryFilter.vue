@@ -8,6 +8,9 @@
 </template>
 
 <style lang="sass" scoped>
+  @import '../assets/config.sass'
+  .filter
+    background: $white
   nav ul, nav li
     margin: 0
     padding: 0

@@ -17,12 +17,24 @@
   .sidebar
     border-right: 1px black solid
     width: 35vw
+    height: 100vh
+    overflow-x: hidden
+    overflow-y: auto
     position: fixed
     top: 0
   .main
     position: absolute
     left: 35vw
     width: 65vw
+    height: 100vh
+    overflow-x: hidden
+    overflow-y: auto
+    padding-top: 100px
+  .filter
+    position: fixed
+    top: 0
+    width: 65vw
+    right: 0
 </style>
 
 <script>
