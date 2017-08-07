@@ -23,10 +23,6 @@ export default {
 </script>
 
 <style lang="sass">
-  @import './assets/main.sass'
-
-  html
-    background: $grey-lighter
-  body, .container
-    background: $white
+  @import './assets/config.sass'
+  @import './assets/App.sass'
 </style>

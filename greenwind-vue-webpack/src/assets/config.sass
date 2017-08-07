@@ -1,14 +1,38 @@
 // config.sass
+@import 'bulmaConfig.sass'
 
 $white: #fafafa
 $black: #222
 $energy: #93be6e
 $offshore: #286aa6
 $operations: #9e9f9e
-
+$primary: #286aa6
 $base-font-size: 16px
 
-// $nav-bar-height: 100px
-// $nav-bar-z-index: 9
-// $page-footer-height: 200px
-// $nav-and-footer-height: 300px
+*
+  user-select: none
+  cursor: default
+a, button
+  cursor: pointer
+input, textarea
+  cursor: text
+
+html
+  background: $grey-lighter
+
+body
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-size: 16px
+  margin: 0
+  padding: 0
+  background: $white
+  color: $black
+
+#app
+  width: 100vw
+  overflow-x: hidden
+
+#app-body
+  min-height: 100vh
