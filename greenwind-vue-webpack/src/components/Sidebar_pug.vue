@@ -46,9 +46,6 @@
             .post
               h2.title hdfhdf dfhsdh hfdh
               span.date 18/06/2015
-
-
-
 </template>
 
 <script>

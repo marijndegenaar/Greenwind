@@ -1,25 +1,33 @@
 <template lang="pug">
   #app
-    nav-bar
-    #app-body
-      transition(name="bounce", mode="out-in" appear)
-        router-view
-    page-footer
+    #app-body.container
+      category-filter
+      .columns
+        sidebar.column.is-4
+        transition(name="bounce", mode="out-in" appear)
+          router-view
 </template>
 
 <script>
-import NavBar from '@/components/NavBar'
-import PageFooter from '@/components/PageFooter'
+import Sidebar from '@/components/Sidebar'
+import CategoryFilter from '@/components/CategoryFilter'
 
 export default {
   name: 'app',
-  components: { NavBar, PageFooter }
+  components: { Sidebar, CategoryFilter },
+  created () {
+    // get prismic posts from API and save in vuex store
+    this.$store.dispatch('fetchPrismicPosts', { self: this })
+  }
 }
 </script>
 
 <style lang="sass">
-   @import './assets/main.sass'
-   @import '~bulma/sass/utilities/_all'
-   @import "~bulma"
-   @import "~buefy/src/scss/buefy"
+  @import './assets/bulmaConfig.sass'
+  html
+    background: black
+  body
+    background: $grey-lighter
+  .container
+    background: $white
 </style>

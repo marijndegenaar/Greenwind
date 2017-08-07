@@ -8,14 +8,16 @@ import router from './router'
 import { sync } from 'vuex-router-sync'
 import store from './store'
 import Buefy from 'buefy'
-
-// import VueMoment from 'vue-moment'
+// import 'buefy/lib/buefy.css'
 
 sync(store, router)
+// --- It adds a route module into the store, which contains the state representing the current route:
+//      store.state.route.path   // current path (string)
+//      store.state.route.params // current params (object)
+//      store.state.route.query  // current query (object)
 
 Vue.use(ElementUI)
 Vue.use(Buefy)
-// Vue.use(VueMoment)
 
 Vue.config.productionTip = false
 
@@ -23,6 +25,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
