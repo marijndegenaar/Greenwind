@@ -4,8 +4,7 @@
     #app-body
       transition(name="bounce", mode="out-in" appear)
         router-view
-    transition(name="slide-fade", mode="out-in" appear)
-      page-footer
+    page-footer
 </template>
 
 <script>

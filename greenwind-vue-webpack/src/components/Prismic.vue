@@ -1,25 +1,61 @@
 <template>
   <div class='wrapper'>
+    <el-row :gutter="40">
 
-    <h1>Prismic (official) JS API</h1>
+      <!-- <sidebar></sidebar> -->
+      <div class="sidebar">
+        <el-col :span="2">
+          <el-menu default-active="2" @open="handleOpen" @close="handleClose" class="el-menu-vertical-demo">
+            <el-menu-item index="1"><i class="el-icon-close"></i></el-menu-item>
+            <el-menu-item index="2"><i class="el-icon-menu"></i></el-menu-item>
+            <el-menu-item index="3"><i class="el-icon-menu"></i></el-menu-item>
+            <el-menu-item index="4"><i class="el-icon-menu"></i></el-menu-item>
+          </el-menu>
+        </el-col>
+        <el-col :span="5">
+          <el-tabs type="border-card" class="year-filter">
+            <el-tab-pane label="All">
+              <section class='posts' v-if='posts && posts.length' v-cloak>
+                <article class='post' v-for='post of posts'>
+                  <h1 class='title'>{{ P.RichText.asText(post.data.title) }}</h1>
+                  <div class="category">
+                    Category: {{ post.data.category }}<br/>
+                    <!-- Date: {{ P.Date(post.last_publication_date) | moment "YYYY" }}<br/> -->
+                    Date: {{ post.last_publication_date | moment }}<br/>
+                  </div>
 
-    <div class="loading" v-show='loaderVisibility'>
-      <Spinner size='large' line-fg-color='#00F'></Spinner>
-    </div>
+                </article>
+              </section>
+            </el-tab-pane>
+            <el-tab-pane label="2017">2017</el-tab-pane>
+            <el-tab-pane label="2016">2016</el-tab-pane>
+            <el-tab-pane label="2015">2015</el-tab-pane>
+          </el-tabs>
+        </el-col>
+      </div>
 
-    <section class='posts' v-if='posts && posts.length' v-cloak>
-      <article class='post' v-for='post of posts'>
-        <h1 class='title'>{{ P.RichText.asText(post.data.title) }}</h1>
-        <div class="category">
-          Category: {{ post.data.category }}<br/>
-          <!-- Date: {{ P.Date(post.last_publication_date) | moment "YYYY" }}<br/> -->
-          Date: {{ post.last_publication_date | moment }}<br/>
-        </div>
-        <div class="content" v-html="P.RichText.asHtml(post.data.content)">
-        </div>
-        <!-- pageContent.data.image.url -->
-      </article>
-    </section>
+      <el-col :span="12">
+
+        <!-- <div class="loading" v-show='loaderVisibility'>
+          <Spinner size='large' line-fg-color='#00F'></Spinner>
+        </div> -->
+
+        <section class='posts' v-if='posts && posts.length' v-cloak>
+          <article class='post' v-for='post of posts'>
+            <h1 class='title'>{{ P.RichText.asText(post.data.title) }}</h1>
+            <div class="category">
+              Category: {{ post.data.category }}<br/>
+              <!-- Date: {{ P.Date(post.last_publication_date) | moment "YYYY" }}<br/> -->
+              Date: {{ post.last_publication_date | moment }}<br/>
+            </div>
+            <div class="content" v-html="P.RichText.asHtml(post.data.content)">
+            </div>
+            <!-- pageContent.data.image.url -->
+          </article>
+        </section>
+      </el-col>
+
+    </el-row>
   </div>
 </template>
 
@@ -28,6 +64,7 @@ import Prismic from 'prismic-javascript'
 import PrismicDOM from 'prismic-dom'
 import moment from 'moment'
 import Spinner from 'vue-simple-spinner'
+import Sidebar from '@/components/Sidebar'
 
 export default {
   data: () => ({
@@ -35,7 +72,7 @@ export default {
     loaderVisibility: true
   }),
   components: {
-    Spinner
+    Spinner, Sidebar
   },
   methods: {
     moment: () => {
