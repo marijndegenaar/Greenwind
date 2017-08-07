@@ -1,7 +1,7 @@
 <template lang="pug">
   #prismic.column.is-7.is-offset-1
     .posts(v-if='posts && posts.length')
-      b-panel(v-for='post of posts', :key='post.id')
+      b-panel(v-for='post of posts', :key='post.id', :class='post.data.category')
         strong(slot='header') {{ P.RichText.asText(post.data.title) }}
         .content
           .meta

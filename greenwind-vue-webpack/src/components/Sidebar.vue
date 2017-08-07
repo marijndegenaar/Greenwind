@@ -6,12 +6,15 @@
       b-tab-item(label='2015')
     b-menu(v-if='posts && posts.length').menu
       b-menu-list(label="News")
-        b-menu-item(v-for='post of posts', :key='post.id')
+        b-menu-item(v-for='post of posts', :key='post.id', :class='post.data.category')
           .title
             | {{ P.RichText.asText(post.data.title) }}
           .date
             | {{ post.last_publication_date | moment }}
 </template>
+
+<style lang="sass" scoped>
+</style>
 
 <script>
 import PrismicDOM from 'prismic-dom'
@@ -43,8 +46,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-  h1
-    color: blue
-</style>
