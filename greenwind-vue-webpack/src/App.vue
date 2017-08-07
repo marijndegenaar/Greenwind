@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    #app-body.container
+    #app-body
       category-filter
       .columns
         sidebar.column.is-4
