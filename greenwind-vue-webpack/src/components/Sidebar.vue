@@ -1,11 +1,16 @@
 <template lang="pug">
-  aside.sidebar
-    b-tabs(v-model='activeTab', position='is-center')
+  .sidebar
+    b-tabs(v-model='activeTab', position='is-center').year
       b-tab-item(label='2017')
       b-tab-item(label='2016')
-    b-menu(v-if='posts && posts.length')
+      b-tab-item(label='2015')
+    b-menu(v-if='posts && posts.length').menu
       b-menu-list(label="News")
-        b-menu-item(v-for='post of posts', :key='post.id') {{ P.RichText.asText(post.data.title) }}
+        b-menu-item(v-for='post of posts', :key='post.id')
+          .title
+            | {{ P.RichText.asText(post.data.title) }}
+          .date
+            | {{ post.last_publication_date | moment }}
 </template>
 
 <script>

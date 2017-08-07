@@ -26,8 +26,6 @@ export default {
   @import './assets/bulmaConfig.sass'
   html
     background: black
-  body
-    background: $white
-  .container
+  body, .container
     background: $white
 </style>
