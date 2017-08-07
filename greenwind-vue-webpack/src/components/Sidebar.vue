@@ -4,9 +4,9 @@
       b-tab-item(label='2017')
       b-tab-item(label='2016')
       b-tab-item(label='2015')
-    b-menu(v-if='posts && posts.length', v-model='activePost').menu
+    b-menu(v-if='posts && posts.length', v-model='activeFilter').menu
       b-menu-list(label="News")
-        b-menu-item(v-for='post of posts', :key='post.data.category', :class='post.data.category')
+        b-menu-item(v-for='post of posts', :key='post.id', :class='post.data.category', :value='post.data.category')
           .title
             | {{ P.RichText.asText(post.data.title) }}
           .date
@@ -27,14 +27,14 @@ export default {
   data: () => ({
     posts: [],
     activeYearFilter: 0,
-    activePost: null
+    activeFilter: null
   }),
   watch: {
     activeYearFilter: (val) => {
       // val is numerical i
       console.log('activeYearFilter: ' + val)
     },
-    activePost: (val) => {
+    activeFilter: (val) => {
       // val is numerical i
       console.log('activePost: ' + val)
     }

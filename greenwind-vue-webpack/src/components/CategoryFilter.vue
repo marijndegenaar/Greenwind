@@ -16,6 +16,9 @@ export default {
   watch: {
     activeFilter: (val) => {
       // val is numerical i
+      if (val === 1) { val = 'energy' }
+      if (val === 2) { val = 'operations' }
+      if (val === 3) { val = 'offshore' }
       console.log('activeFilter: ' + val)
     }
   }
