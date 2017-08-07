@@ -29,5 +29,4 @@ export default {
     background: $grey-lighter
   body, .container
     background: $white
-
 </style>

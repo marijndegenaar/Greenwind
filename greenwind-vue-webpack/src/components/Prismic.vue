@@ -10,7 +10,7 @@
 
 <style lang="sass" scoped>
   @import '../assets/config.sass'
-  
+
   .meta
     border-bottom: 1px #eee solid
     padding-bottom: 0.5em
