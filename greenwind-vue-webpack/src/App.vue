@@ -28,10 +28,10 @@ export default {
     background: black
   body, .container
     background: $white
-  .Energy
+  .energy
     background: #AFC
-  .Operations
+  .operations
     background: #eee
-  .Offshore
+  .offshore
     background: #ACF
 </style>

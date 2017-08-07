@@ -11,6 +11,8 @@
             | {{ P.RichText.asText(post.data.title) }}
           .date
             | {{ post.last_publication_date | moment }}
+          .link
+            | Link: /{{ post.data.category }}/{{ post.uid }}
 </template>
 
 <style lang="sass" scoped>
