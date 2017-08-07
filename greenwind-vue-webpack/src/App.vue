@@ -1,12 +1,29 @@
 <template lang="pug">
   #app
     #app-body
-      category-filter
-      .columns
-        sidebar.column.is-4
-        transition(name="bounce", mode="out-in" appear)
-          router-view
+      sidebar.sidebar
+      section.main
+        category-filter.filter
+        .the-post
+          transition(name="bounce", mode="out-in" appear)
+            router-view
 </template>
+
+<style lang="sass">
+  @import './assets/bulmaConfig.sass'
+  @import './assets/config.sass'
+  @import './assets/App.sass'
+
+  .sidebar
+    border-right: 1px black solid
+    width: 35vw
+    position: fixed
+    top: 0
+  .main
+    position: absolute
+    left: 35vw
+    width: 65vw
+</style>
 
 <script>
 import Sidebar from '@/components/Sidebar'
@@ -21,9 +38,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-  @import './assets/bulmaConfig.sass'
-  @import './assets/config.sass'
-  @import './assets/App.sass'
-</style>

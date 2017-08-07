@@ -1,5 +1,5 @@
 <template lang="pug">
-  #prismic.column.is-7.is-offset-1
+  #prismic
     .posts(v-if='posts && posts.length')
       article(v-for='post of posts', :key='post.id', :class='post.data.category').post
         h1.title {{ P.RichText.asText(post.data.title) }}

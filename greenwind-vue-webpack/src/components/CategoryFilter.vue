@@ -1,11 +1,17 @@
 <template lang="pug">
-  nav#filter
+  nav.filter
     b-tabs(v-model='activeFilter', position='is-right')
       b-tab-item(label='All')
       b-tab-item(label='Energy', icon="battery_charging_full")
       b-tab-item(label='Operations', icon="contact_phone")
       b-tab-item(label='Offshore', icon="toys")
 </template>
+
+<style lang="sass" scoped>
+  nav ul, nav li
+    margin: 0
+    padding: 0
+</style>
 
 <script>
 export default {
@@ -24,9 +30,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-  nav ul, nav li
-    margin: 0
-    padding: 0
-</style>
