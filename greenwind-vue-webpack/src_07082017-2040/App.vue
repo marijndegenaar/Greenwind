@@ -23,11 +23,15 @@ export default {
 </script>
 
 <style lang="sass">
-  @import './assets/main.sass'
-
+  @import './assets/bulmaConfig.sass'
   html
-    background: $grey-lighter
+    background: black
   body, .container
     background: $white
-
+  .Energy
+    background: #AFC
+  .Operations
+    background: #eee
+  .Offshore
+    background: #ACF
 </style>

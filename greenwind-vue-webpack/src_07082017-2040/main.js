@@ -8,6 +8,7 @@ import router from './router'
 import { sync } from 'vuex-router-sync'
 import store from './store'
 import Buefy from 'buefy'
+// import 'buefy/lib/buefy.css'
 
 sync(store, router)
 // --- It adds a route module into the store, which contains the state representing the current route:
@@ -17,6 +18,7 @@ sync(store, router)
 
 Vue.use(ElementUI)
 Vue.use(Buefy)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

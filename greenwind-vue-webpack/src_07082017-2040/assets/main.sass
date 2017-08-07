@@ -1,5 +1,4 @@
-@import './assets/bulmaConfig.sass'
-@import './config.sass'
+@import '../assets/config.sass'
 
 *
   user-select: none
@@ -9,6 +8,9 @@ a, button
   cursor: pointer
 input, textarea
   cursor: text
+h1, h2, h3, h4, h5, h6, p, li, ul
+  margin: 0
+  padding: 1em 0
 
 html
   background: black
@@ -21,13 +23,21 @@ body
   padding: 0
   background: $white
   color: $black
+  font-size: $base-font-size
 
 #app
   width: 100vw
   overflow-x: hidden
 
 #app-body
+<<<<<<< Updated upstream
+  text-align: center
+  // min-height: calc(100vh - #{$nav-and-footer-height})
   min-height: 100vh
+=======
+  min-height: calc(100vh - #{$nav-and-footer-height})
+>>>>>>> Stashed changes
+  padding-top: $nav-bar-height
 
 .bounce-enter-active
   animation: bounce-in .5s

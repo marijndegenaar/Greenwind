@@ -1,6 +1,6 @@
 <template lang="pug">
   nav#filter
-    b-tabs(v-model='activeTab', position='is-right', type="is-boxed")
+    b-tabs(v-model='activeFilter', position='is-right')
       b-tab-item(label='All')
       b-tab-item(label='Energy', icon="battery_charging_full")
       b-tab-item(label='Operations', icon="contact_phone")
@@ -9,18 +9,21 @@
 
 <script>
 export default {
-  name: 'sidebar',
+  name: 'category-filter',
   data: () => ({
-    activeTab: 0
+    activeFilter: 0
   }),
   watch: {
-    activeTab: (val) => {
+    activeFilter: (val) => {
       // val is numerical i
-      console.log('tab: ' + val)
+      console.log('activeFilter: ' + val)
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
+  nav ul, nav li
+    margin: 0
+    padding: 0
 </style>

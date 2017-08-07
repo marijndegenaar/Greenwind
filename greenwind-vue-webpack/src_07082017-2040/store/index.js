@@ -20,15 +20,9 @@ export default new Vuex.Store({
         Prismic.getApi('https://greenwind.prismic.io/api/v2')
           .then(api => api.query(''))
           .then(response => {
-            // change 'Greenwind Energy' to just 'energy', etc.
-            response.results.forEach((post) => {
-              post.data.category = post.data.category.replace(/Greenwind /i, '').toLowerCase()
-            })
-            // save it to store
             commit('FETCH_POSTS', response.results)
             resolve()
           }, error => {
-            // get posts from store without another API call
             console.log('store > Error: ', error)
           })
       })

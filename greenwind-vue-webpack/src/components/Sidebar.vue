@@ -1,12 +1,12 @@
 <template lang="pug">
   .sidebar
-    b-tabs(v-model='activeTab', position='is-center', type='is-toggle' expanded).year
+    b-tabs(v-model='activeYearFilter', position='is-center', type='is-toggle' expanded).year
       b-tab-item(label='2017')
       b-tab-item(label='2016')
       b-tab-item(label='2015')
-    b-menu(v-if='posts && posts.length').menu
+    b-menu(v-if='posts && posts.length', v-model='activePost').menu
       b-menu-list(label="News")
-        b-menu-item(v-for='post of posts', :key='post.id', :class='post.data.category')
+        b-menu-item(v-for='post of posts', :key='post.data.category', :class='post.data.category')
           .title
             | {{ P.RichText.asText(post.data.title) }}
           .date
@@ -26,8 +26,19 @@ export default {
   name: 'sidebar',
   data: () => ({
     posts: [],
-    activeTab: 0
+    activeYearFilter: 0,
+    activePost: null
   }),
+  watch: {
+    activeYearFilter: (val) => {
+      // val is numerical i
+      console.log('activeYearFilter: ' + val)
+    },
+    activePost: (val) => {
+      // val is numerical i
+      console.log('activePost: ' + val)
+    }
+  },
   methods: {
     moment: () => {
       return moment()
@@ -48,3 +59,14 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+  @import '../assets/config.sass'
+
+  .energy
+    background: $energy
+  .offshore
+    background: $offshore
+  .operations
+    background: $operations
+</style>

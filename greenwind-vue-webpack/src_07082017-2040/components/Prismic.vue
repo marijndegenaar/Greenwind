@@ -1,26 +1,20 @@
 <template lang="pug">
   #prismic.column.is-7.is-offset-1
     .posts(v-if='posts && posts.length')
-      article(v-for='post of posts', :key='post.id', :class='post.data.category').post
-        h1.title {{ P.RichText.asText(post.data.title) }}
-        .meta
-          .category Category: {{ post.data.category }}
-          .date Date: {{ post.last_publication_date | moment }}
+      b-panel(v-for='post of posts', :key='post.id', :class='post.data.category')
+        strong(slot='header') {{ P.RichText.asText(post.data.title) }}
+        .content
+          .meta
+            .category Category: {{ post.data.category }}
+            .date Date: {{ post.last_publication_date | moment }}
+          .richtext(v-html='P.RichText.asHtml(post.data.content)')
 </template>
 
 <style lang="sass" scoped>
-  @import '../assets/config.sass'
-  
   .meta
     border-bottom: 1px #eee solid
     padding-bottom: 0.5em
     margin-bottom: 0.5em
-  .energy
-    background: $energy
-  .offshore
-    background: $offshore
-  .operations
-    background: $operations
 </style>
 
 <script>
