@@ -1,16 +1,40 @@
 <template lang="pug">
+  //- nav.filter
+  //-   b-tabs(v-model='activeFilter', position='is-right')
+  //-     b-tab-item(label='All')
+  //-     b-tab-item(label='Energy', icon="battery_charging_full")
+  //-       img(src="../assets/svg/greenwind_energy_logo-long.svg")
+  //-     b-tab-item(label='Operations', icon="contact_phone")
+  //-     b-tab-item(label='Offshore', icon="toys")
   nav.filter
-    b-tabs(v-model='activeFilter', position='is-right')
-      b-tab-item(label='All')
-      b-tab-item(label='Energy', icon="battery_charging_full")
-      b-tab-item(label='Operations', icon="contact_phone")
-      b-tab-item(label='Offshore', icon="toys")
+    ul(v-model='activeFilter')
+      li
+        a
+          img(src="../assets/svg/greenwind_energy_logo-long.svg").
+      li
+        a
+          img(src="../assets/svg/greenwind_offshore_logo-long.svg")
+      li
+        a
+          img(src="../assets/svg/greenwind_operations_logo-long.svg")
 </template>
 
 <style lang="sass" scoped>
   @import '../assets/config.sass'
-  .filter li
-    background: $white
+  .filter
+    padding: .75rem 5vw
+    height: 50px
+    ul
+      display: flex
+      justify-content: flex-end
+      li
+        background: $white
+        margin-left: 3rem
+        &:hover
+          opacity: .8
+        img
+          height: 30px
+
   nav ul, nav li
     margin: 0
     padding: 0

@@ -26,7 +26,7 @@ export default {
   @import './assets/App.sass'
 
   .sidebar
-    border-right: 1px black solid
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25)
     width: 35vw
     height: 100vh
     overflow-x: hidden
