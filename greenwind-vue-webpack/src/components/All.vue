@@ -9,24 +9,10 @@
         .content(v-html='P.RichText.asHtml(post.data.content)')
 </template>
 
-<style lang="sass" scoped>
-  @import '../assets/config.sass'
-
-  .meta
-    border-bottom: 1px #eee solid
-    padding-bottom: 0.5em
-    margin-bottom: 0.5em
-  .energy
-    background: $energy
-  .offshore
-    background: $offshore
-  .operations
-    background: $operations
-</style>
-
 <script>
 import PrismicDOM from 'prismic-dom'
 import moment from 'moment'
+// import router from '../router'
 // import Spinner from 'vue-simple-spinner'
 
 export default {
@@ -34,6 +20,14 @@ export default {
     posts: [],
     loaderVisibility: true
   }),
+  created () {
+    this.P = PrismicDOM
+    // fetch all posts from vuex store
+    this.$store.dispatch('fetchStatePosts').then(response => {
+      this.posts = response
+      // console.log(response)
+    })
+  },
   methods: {
     moment: () => {
       return moment()
@@ -43,12 +37,12 @@ export default {
     moment: (date) => {
       return moment(date).format('l').split('/').join('.')
     }
-  },
-  created () {
-    this.$store.dispatch('fetchStatePosts').then(response => {
-      this.posts = response
-    })
-    this.P = PrismicDOM
   }
 }
 </script>
+
+
+<style lang="sass" scoped>
+  @import '../assets/config.sass'
+  @import '../assets/Posts.sass'
+</style>

@@ -6,7 +6,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    viewPost: null,
     posts: []
   },
   mutations: {
@@ -34,8 +33,22 @@ export default new Vuex.Store({
       })
     },
     async fetchStatePosts ({ self, dispatch, state }) {
-      await dispatch('fetchPrismicPosts')
+      // only fetchPrismicPosts() if it's not done already
+      if (state.posts.length === 0) {
+        await dispatch('fetchPrismicPosts')
+      }
       return state.posts
+    },
+    async fetchStatePost ({ self, dispatch, state }, uid) {
+      // only fetchPrismicPosts() if it's not done already
+      if (state.posts.length === 0) {
+        await dispatch('fetchPrismicPosts')
+      }
+      const posts = state.posts
+      const post = posts.filter(x => x.uid === uid)
+      return post
+      // console.log(uid)
+      // console.log(post)
     }
   }
 })

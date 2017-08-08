@@ -9,7 +9,7 @@
 
 <style lang="sass" scoped>
   @import '../assets/config.sass'
-  .filter
+  .filter li
     background: $white
   nav ul, nav li
     margin: 0

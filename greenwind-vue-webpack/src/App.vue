@@ -5,9 +5,10 @@
       section.main
         category-filter.filter
         .the-post
-          transition(name="bounce", mode="out-in" appear)
-            router-view
+          router-view
 </template>
+
+<!-- transition(name="bounce", mode="out-in" appear) -->
 
 <style lang="sass">
   @import './assets/bulmaConfig.sass'
@@ -29,12 +30,14 @@
     height: 100vh
     overflow-x: hidden
     overflow-y: auto
-    padding-top: 100px
+    padding-top: 40px
   .filter
     position: fixed
     top: 0
     width: 65vw
     right: 0
+    height: 40px
+    background: $white
 </style>
 
 <script>
@@ -43,10 +46,17 @@ import CategoryFilter from '@/components/CategoryFilter'
 
 export default {
   name: 'app',
-  components: { Sidebar, CategoryFilter },
-  created () {
-    // get prismic posts from API and save in vuex store
-    this.$store.dispatch('fetchPrismicPosts', { self: this })
-  }
+  components: { Sidebar, CategoryFilter }
+  // ,
+  // created () {
+  //  get prismic posts from API and save in vuex store
+  //  this.$store.dispatch('fetchPrismicPosts', { self: this })
+  // }
+  // ,
+  // watch: {
+  //   '$route' (to, from) {
+  //     this.$store.dispatch('setRoutePath', to.path)
+  //   }
+  // }
 }
 </script>

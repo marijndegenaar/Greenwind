@@ -5,11 +5,12 @@ import Vue from 'vue'
 // import 'element-ui/lib/theme-default/index.css'
 import App from './App'
 import router from './router'
-import { sync } from 'vuex-router-sync'
 import store from './store'
 import Buefy from 'buefy'
 
-sync(store, router)
+// import { sync } from 'vuex-router-sync'
+// sync(store, router)
+
 // --- It adds a route module into the store, which contains the state representing the current route:
 //      store.state.route.path   // current path (string)
 //      store.state.route.params // current params (object)
