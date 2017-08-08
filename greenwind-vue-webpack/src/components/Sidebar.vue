@@ -71,6 +71,7 @@ export default {
     list-style: none
     padding: 1em
     cursor: pointer
+    border-bottom: 1px $white solid
     div
       cursor: pointer
       color: white

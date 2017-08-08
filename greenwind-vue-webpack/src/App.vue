@@ -5,14 +5,24 @@
       section.main
         category-filter.filter
         .the-post
-          router-view
+          transition(name="slide-fade", mode="out-in" appear)
+            router-view
 </template>
 
-<!-- transition(name="bounce", mode="out-in" appear) -->
+<script>
+import Sidebar from '@/components/Sidebar'
+import CategoryFilter from '@/components/CategoryFilter'
+
+export default {
+  name: 'app',
+  components: { Sidebar, CategoryFilter }
+}
+</script>
 
 <style lang="sass">
   @import './assets/bulmaConfig.sass'
   @import './assets/config.sass'
+  @import './assets/animation.sass'
   @import './assets/App.sass'
 
   .sidebar
@@ -39,24 +49,3 @@
     height: 40px
     background: $white
 </style>
-
-<script>
-import Sidebar from '@/components/Sidebar'
-import CategoryFilter from '@/components/CategoryFilter'
-
-export default {
-  name: 'app',
-  components: { Sidebar, CategoryFilter }
-  // ,
-  // created () {
-  //  get prismic posts from API and save in vuex store
-  //  this.$store.dispatch('fetchPrismicPosts', { self: this })
-  // }
-  // ,
-  // watch: {
-  //   '$route' (to, from) {
-  //     this.$store.dispatch('setRoutePath', to.path)
-  //   }
-  // }
-}
-</script>
