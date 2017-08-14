@@ -1,23 +1,33 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+<template lang="pug">
+  #app
+    whatever.whatever
+    router-view
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import Whatever from '@/components/Whatever'
+
+  export default {
+    name: 'app',
+    components: { Whatever },
+    watch: {
+      '$route': 'routeChange'
+    },
+    methods: {
+      routeChange () {
+        const route = this.$route
+        console.log(route)
+      }
+    }
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  @import './assets/sass/bulmaConfig.sass'
+  @import './assets/sass/config.sass'
+  @import './assets/sass/animation.sass'
+  @import './assets/sass/root.sass'
+
+  .whatever
+    border: 1px blue solid
 </style>
