@@ -1,15 +1,14 @@
 <template lang="pug">
   #app
-    whatever.whatever
     router-view
 </template>
 
 <script>
-  import Whatever from '@/components/Whatever'
+  // import Whatever from '@/components/Whatever'
 
   export default {
     name: 'app',
-    components: { Whatever },
+    // components: { Whatever },
     watch: {
       '$route': 'routeChange'
     },
@@ -27,7 +26,4 @@
   @import './assets/sass/config.sass'
   @import './assets/sass/animation.sass'
   @import './assets/sass/root.sass'
-
-  .whatever
-    border: 1px blue solid
 </style>
