@@ -1,62 +1,76 @@
 <template lang="pug">
   .inner
-    //- b-tabs(v-model='activeYearFilter', expanded).years
-    //-   b-tab-item(label='2017')
-    //-   b-tab-item(label='2016')
-    //-   b-tab-item(label='2015')
-    ul(v-model='activeYearFilter', expanded).years
-      li 2017
-      li 2016
-      li 2015
-    b-menu(v-if='posts && posts.length', v-model='activePost', router=true)
-      b-menu-item(v-for='post of posts', :key='post.id', :class='post.data.category', :value='post.uid').menu-item
-        .inner
-          h3.title
-            | {{ P.RichText.asText(post.data.title) }}
-          .date
-            b-icon(icon="schedule", size="is-small")
-            | {{ post.last_publication_date | moment }}
+    .years
+      .year(@click='setActiveYear', data-year='2017').is-active 2017
+      .year(@click='setActiveYear', data-year='2016') 2016
+      .year(@click='setActiveYear', data-year='2015') 2015
+
+    .menu(v-if='posts && posts.length')
+      .menu-item(v-for='post of posts', :key='post.id', :class='post.data.category', :value='post.uid')
+        //- , v-model='activePost'
+        router-link(:to='post.uid')
+          .inner
+            h3.title
+              | {{ P.RichText.asText(post.data.title) }}
+            .date
+              //- b-icon(icon="schedule", size="is-small")
+              //- | {{ post.last_publication_date | moment }}
+              | {{ post.last_publication_date }}
 </template>
 
 <script>
 import PrismicDOM from 'prismic-dom'
-import moment from 'moment'
-import router from '../router'
+import $ from 'domtastic'
+// import moment from 'moment'
+// import router from '../router'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'sidebar',
-  data: () => ({
-    posts: [],
-    activeYearFilter: 0,
-    activePost: null
-  }),
-  watch: {
-    activeYearFilter: (val) => {
-      // val is numerical i
-      console.log('activeYearFilter: ' + val)
-    },
-    activePost: (val) => {
-      router.push({
-        path: '/' + val
-        // params: { id: val }
-      })
+  data () {
+    return {
+      posts: [],
+      filterYear: null,
+      activePost: null
     }
+  },
+  watch: {
+    '$route': 'setActivePost',
+    activeFilter () {
+      const category = this.activeFilter
+      if (category !== 'all') {
+        $('.menu-item:not(.' + category + ')').addClass('hidden')
+        $('.menu-item.hidden.' + category).removeClass('hidden')
+      } else {
+        $('.hidden').removeClass('hidden')
+      }
+    }
+  },
+  computed: {
+    ...mapGetters({
+      activeFilter: 'getActiveFilter'
+    })
   },
   methods: {
-    moment: () => {
-      return moment()
-    }
-  },
-  filters: {
-    moment: (date) => {
-      // format date string here... look up moment.js
-      // return moment(date).format('l').split('/').join('.')
-      return moment(date).format('ll')
+    setActivePost () {
+      const uid = this.$route.params.id
+      $('.menu-item').removeClass('is-active')
+      $('.menu-item[value="' + uid + '"]').addClass('is-active')
+    },
+    setActiveYear (e) {
+      const t = $(e.currentTarget)
+      const year = t.attr('data-year')
+      $('.years .is-active').removeClass('is-active')
+      t.addClass('is-active')
+      this.filterYear = year
     }
   },
   created () {
     this.$store.dispatch('fetchStatePosts').then(response => {
       this.posts = response
+      setTimeout(() => {
+        this.setActivePost()
+      }, 10)
     })
     this.P = PrismicDOM
   }
@@ -65,7 +79,7 @@ export default {
 
 <style lang="sass" scoped>
   @import '../assets/config.sass'
-  ul.years
+  .years
     position: fixed
     width: 35vw
     height: 40px
@@ -73,7 +87,8 @@ export default {
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25)
     display: flex
     text-align: center
-    li
+    z-index: 7
+    .year
       padding: .5em 1em
       flex-grow: 1
       border-left: 1px solid darken($grey-lighter, 4)
@@ -85,15 +100,31 @@ export default {
 
   .menu
     margin-top: 40px
-  .menu-item
-    list-style: none
-    padding: 2em 3em
+  .menu-item *
     cursor: pointer
-    border-bottom: 1px $white solid
-    &.active-item
-      h3.title
-        color: $black
-    h3.title
+  .menu-item.hidden
+    opacity: 0
+    max-height: 0
+  .menu-item
+    transition: 500ms all
+    transform: scaleY(1)
+    cursor: pointer
+    border-bottom: 2px $white solid
+    overflow: hidden
+    opacity: 1
+    max-height: 50vh
+    &.is-active
+      .inner
+        background: white
+        transform: translateX(35px)
+      .title
+        color: black
+    .inner
+      padding: 25px 35px
+      transition: 300ms all
+    .title
+      transition: 300ms all
+      font-weight: normal
       font-size: 1.5rem
       color: $white
       margin-bottom: .5em
@@ -108,23 +139,18 @@ export default {
       cursor: pointer
       color: white
   .energy
-    background: linear-gradient(to top, darken($energy, 15), $energy)
+    background: $energy
     &:hover
-      background: linear-gradient(to top, darken($energy, 10), $energy)
-    &.active-item
-      background: linear-gradient(to right, $energy 6%, $white 0%)
-  .offshore
-    background: linear-gradient(to top, darken($offshore, 15), $offshore)
-    &:hover, &:active
-      background: linear-gradient(to top, darken($offshore, 10), $offshore)
-    &.active-item
-      background: linear-gradient(to right, $offshore 6%, $white 0%)
-  .operations
-    background: linear-gradient(to top, darken($operations, 15), $operations)
-    &:hover, &:active
-      background: linear-gradient(to top, darken($operations, 10), $operations)
-    &.active-item
-      background: linear-gradient(to right, $operations 6%, $white 0%)
+      background: lighten($energy, 10)
+    &.is-active
 
+  .offshore
+    background: $offshore
+    &:hover
+      background: lighten($offshore, 10)
+  .operations
+    background: $operations
+    &:hover
+      background: lighten($operations, 10)
 
 </style>

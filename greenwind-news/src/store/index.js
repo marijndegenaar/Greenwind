@@ -6,14 +6,25 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    posts: []
+    posts: [],
+    activeFilter: null
   },
   mutations: {
     FETCH_POSTS (state, posts) {
       state.posts = posts
+    },
+    ACTIVE_FILTER (state, category) {
+      state.activeFilter = category
     }
   },
+
+  getters: {
+    getActiveFilter: state => state.activeFilter
+  },
   actions: {
+    setActiveFilter ({ commit, self, dispatch }, category) {
+      commit('ACTIVE_FILTER', category)
+    },
     async fetchPrismicPosts ({ commit, self, dispatch }) {
       return new Promise((resolve, reject) => {
         Prismic.getApi('https://greenwind.prismic.io/api/v2')
@@ -47,8 +58,6 @@ export default new Vuex.Store({
       const posts = state.posts
       const post = posts.filter(x => x.uid === uid)
       return post
-      // console.log(uid)
-      // console.log(post)
     }
   }
 })

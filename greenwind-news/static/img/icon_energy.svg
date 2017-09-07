@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>GWE_Logo_4c</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0751323705 35.5953348 0.0751323705 0.356959213 34.5759169 0.356959213 34.5759169 17.976147 34.5759169 35.5953348 0.0751323705 35.5953348"></polygon>
+        <polygon id="path-3" points="0.504639088 8.15240869 0.504639088 0.342239245 6.51522873 4.24548397"></polygon>
+    </defs>
+    <g id="Energy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-copy-21" transform="translate(-34.000000, -88.000000)">
+            <g id="Group-4" transform="translate(34.000000, 87.000000)">
+                <g id="GWE_Logo_4c" transform="translate(17.500000, 18.000000) rotate(-360.000000) translate(-17.500000, -18.000000) ">
+                    <g id="Group-20">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-18"></g>
+                        <path d="M34.5007845,28.1911912 C34.5007845,32.2808888 31.1173234,35.5953348 26.9437203,35.5953348 L7.55831647,35.5953348 C3.38471329,35.5953348 0,32.2808888 0,28.1911912 L0,9.20243304 C0,5.11273539 3.38471329,1.79951603 7.55831647,1.79951603 L26.9437203,1.79951603 C31.1173234,1.79951603 34.5007845,5.11273539 34.5007845,9.20243304 L34.5007845,28.1911912" id="Fill-19" fill="#84AF5F" mask="url(#mask-2)"></path>
+                    </g>
+                    <polyline id="Fill-21" fill="#FFFFFE" points="15.280672 20.6496611 15.280672 28.4598306 21.2912616 24.5553592 15.280672 20.6496611"></polyline>
+                    <polyline id="Fill-22" fill="#FFFFFE" points="21.2912616 16.7464164 21.2912616 24.5578125 27.3018512 20.6496611 21.2912616 16.7464164"></polyline>
+                    <polyline id="Fill-23" fill="#FFFFFE" points="21.2912616 24.5590392 21.2912616 32.3728886 27.3018512 28.4671905 21.2912616 24.5590392"></polyline>
+                    <g id="Group-26" transform="translate(8.765443, 8.586648)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Clip-25"></g>
+                        <polygon id="Fill-24" fill="#B1CA94" mask="url(#mask-4)" points="0.504639088 8.15240869 6.51522873 8.15240869 6.51522873 0.342239245 0.504639088 0.342239245"></polygon>
+                    </g>
+                    <polyline id="Fill-27" fill="#B1CA94" points="15.280672 12.834585 15.280672 5.02196226 21.2912616 8.92888697 15.280672 12.834585"></polyline>
+                    <polyline id="Fill-28" fill="#B1CA94" points="15.280672 20.6496611 15.280672 12.8394917 21.2912616 16.7439631 15.280672 20.6496611"></polyline>
+                    <polyline id="Fill-29" fill="#CBDAB1" points="3.25949267 28.4598306 3.25949267 20.6496611 9.27008231 24.5553592 3.25949267 28.4598306"></polyline>
+                    <polyline id="Fill-30" fill="#CBDAB1" points="9.27008231 24.5578125 9.27008231 16.7464164 15.280672 20.6496611 9.27008231 24.5578125"></polyline>
+                    <polyline id="Fill-31" fill="#CBDAB1" points="9.27008231 32.3728886 9.27008231 24.5590392 15.280672 28.4671905 9.27008231 32.3728886"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

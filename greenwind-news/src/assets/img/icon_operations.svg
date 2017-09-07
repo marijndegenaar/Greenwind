@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>GWO_Logo_4c</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0769562068 36.7435714 0.0769562068 0.368474026 35.4152464 0.368474026 35.4152464 18.5560227 35.4152464 36.7435714 0.0769562068 36.7435714"></polygon>
+    </defs>
+    <g id="Energy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-copy-21" transform="translate(-34.000000, -136.000000)">
+            <g id="Group-4" transform="translate(34.000000, 87.000000)">
+                <g id="GWO_Logo_4c" transform="translate(0.000000, 48.000000)">
+                    <g id="Group-12">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-10"></g>
+                        <path d="M35.3382901,29.1005844 C35.3382901,33.3222078 31.8726956,36.7435714 27.5977783,36.7435714 L7.7417944,36.7435714 C3.46687711,36.7435714 0,33.3222078 0,29.1005844 L0,9.49928571 C0,5.27766234 3.46687711,1.85756494 7.7417944,1.85756494 L27.5977783,1.85756494 C31.8726956,1.85756494 35.3382901,5.27766234 35.3382901,9.49928571 L35.3382901,29.1005844" id="Fill-11" fill="#D5D5D5" mask="url(#mask-2)"></path>
+                    </g>
+                    <polyline id="Fill-13" fill="#FFFFFF" points="15.6516099 21.3157792 15.6516099 29.3778896 21.8081064 25.3474675 15.6516099 21.3157792"></polyline>
+                    <polyline id="Fill-14" fill="#FFFFFF" points="21.8081064 17.2866234 21.8081064 25.35 27.9646029 21.3157792 21.8081064 17.2866234"></polyline>
+                    <polyline id="Fill-15" fill="#FFFFFF" points="21.8081064 25.3512662 21.8081064 33.4171753 27.9646029 29.385487 21.8081064 25.3512662"></polyline>
+                    <polyline id="Fill-16" fill="#FFFFFF" points="9.49511331 17.279026 9.49511331 9.21691558 15.6516099 13.2460714 9.49511331 17.279026"></polyline>
+                    <polyline id="Fill-17" fill="#FFFFFF" points="15.6516099 13.2486039 15.6516099 5.18396104 21.8081064 9.21691558 15.6516099 13.2486039"></polyline>
+                    <polyline id="Fill-18" fill="#FFFFFF" points="15.6516099 21.3157792 15.6516099 13.2536688 21.8081064 17.2840909 15.6516099 21.3157792"></polyline>
+                    <polyline id="Fill-19" fill="#FFFFFF" points="3.33861677 29.3778896 3.33861677 21.3157792 9.49511331 25.3474675 3.33861677 29.3778896"></polyline>
+                    <polyline id="Fill-20" fill="#FFFFFF" points="9.49511331 25.35 9.49511331 17.2866234 15.6516099 21.3157792 9.49511331 25.35"></polyline>
+                    <polyline id="Fill-21" fill="#FFFFFF" points="9.49511331 33.4171753 9.49511331 25.3512662 15.6516099 29.385487 9.49511331 33.4171753"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

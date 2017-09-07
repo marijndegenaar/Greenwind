@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="37px" height="38px" viewBox="0 0 37 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>GW_Offshore_4c</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0804424779 38.58075 0.0804424779 0.386897727 18.5500354 0.386897727 37.0196283 0.386897727 37.0196283 38.58075 0.0804424779 38.58075"></polygon>
+    </defs>
+    <g id="Energy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-copy-21" transform="translate(-34.000000, -184.000000)">
+            <g id="Group-4" transform="translate(34.000000, 87.000000)">
+                <g id="GW_Offshore_4c" transform="translate(0.000000, 96.000000)">
+                    <g id="Group-12">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-10"></g>
+                        <path d="M36.9391858,30.5556136 C36.9391858,34.9883182 33.3165929,38.58075 28.8480133,38.58075 L8.09251327,38.58075 C3.62393363,38.58075 0,34.9883182 0,30.5556136 L0,9.97425 C0,5.54154545 3.62393363,1.95044318 8.09251327,1.95044318 L28.8480133,1.95044318 C33.3165929,1.95044318 36.9391858,5.54154545 36.9391858,9.97425 L36.9391858,30.5556136" id="Fill-11" fill="#286AA6" mask="url(#mask-2)"></path>
+                    </g>
+                    <polyline id="Fill-13" fill="#FFFFFE" points="16.3606593 22.3815682 16.3606593 30.8467841 22.7960575 26.6148409 16.3606593 22.3815682"></polyline>
+                    <polyline id="Fill-14" fill="#FFFFFE" points="22.7960575 18.1509545 22.7960575 26.6175 29.2314558 22.3815682 22.7960575 18.1509545"></polyline>
+                    <polyline id="Fill-15" fill="#FFFFFE" points="22.7960575 26.6188295 22.7960575 35.0880341 29.2314558 30.8547614 22.7960575 26.6188295"></polyline>
+                    <polyline id="Fill-16" fill="#7896C0" points="9.92526106 18.1429773 9.92526106 9.67776136 16.3606593 13.908375 9.92526106 18.1429773"></polyline>
+                    <polyline id="Fill-17" fill="#7896C0" points="16.3606593 13.9110341 16.3606593 5.44315909 22.7960575 9.67776136 16.3606593 13.9110341"></polyline>
+                    <polyline id="Fill-18" fill="#7896C0" points="16.3606593 22.3815682 16.3606593 13.9163523 22.7960575 18.1482955 16.3606593 22.3815682"></polyline>
+                    <polyline id="Fill-19" fill="#A0B2D1" points="3.48986283 30.8467841 3.48986283 22.3815682 9.92526106 26.6148409 3.48986283 30.8467841"></polyline>
+                    <polyline id="Fill-20" fill="#A0B2D1" points="9.92526106 26.6175 9.92526106 18.1509545 16.3606593 22.3815682 9.92526106 26.6175"></polyline>
+                    <polyline id="Fill-21" fill="#A0B2D1" points="9.92526106 35.0880341 9.92526106 26.6188295 16.3606593 30.8547614 9.92526106 35.0880341"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

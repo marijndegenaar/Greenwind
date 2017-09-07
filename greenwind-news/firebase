@@ -1,0 +1,1 @@
+rm -rf ~/Sites/greenwind-firebase/public/news && cp -R dist ~/Sites/greenwind-firebase/public/news && cd ~/Sites/greenwind-firebase

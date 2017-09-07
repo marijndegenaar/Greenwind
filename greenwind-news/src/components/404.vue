@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper">
-    <h1>{{ msg }}</h1>
+    <h1>Page not found</h1>
 	</div>
 </template>
 
@@ -9,7 +9,6 @@ export default {
   name: 'homepage',
   data () {
     return {
-      msg: 'Page not found'
     }
   }
 }

@@ -1,9 +1,11 @@
 <template lang="pug">
   #app
     #app-body
+      #logo
+        img(src="./assets/img/news.svg")
+      category-filter.filter
       sidebar.sidebar
       section.main
-        category-filter.filter
         .the-post
           transition(name="slide-fade", mode="out-in" appear)
             router-view
@@ -25,6 +27,13 @@ export default {
   @import './assets/animation.sass'
   @import './assets/App.sass'
 
+  #logo
+    position: fixed
+    top: 20px
+    right: 30px
+    z-index: 100
+    img
+      width: 110px
   .sidebar
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25)
     width: 35vw
@@ -32,11 +41,13 @@ export default {
     overflow-x: hidden
     overflow-y: auto
     position: fixed
+    left: 80px
     top: 0
+    z-index: 5
   .main
     position: absolute
-    left: 35vw
-    width: 65vw
+    left: calc(35vw + 80px)
+    width: calc(65vw - 80px)
     height: 100vh
     overflow-x: hidden
     overflow-y: auto
@@ -44,8 +55,9 @@ export default {
   .filter
     position: fixed
     top: 0
-    width: 65vw
-    right: 0
-    height: 40px
-    background: $white
+    left: 0
+    width: 80px
+    height: 100vh
+    z-index: 10
+    padding-top: 20px
 </style>
